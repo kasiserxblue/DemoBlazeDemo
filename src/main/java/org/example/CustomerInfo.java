@@ -1,5 +1,6 @@
 package org.example;
 
+//Objeto informacion del cliente
 public class CustomerInfo {
 
     private String fullName;

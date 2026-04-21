@@ -44,8 +44,8 @@ public class DemoBlazeStore {
 
         }catch(Exception e){
             System.out.println("Error E2ETest --> "+e.getMessage());
+            driver.quit();
         }finally {
-            //driver.quit();
             singleton.setDriver(driver);
         }
 
@@ -80,6 +80,7 @@ public class DemoBlazeStore {
 
         }catch(Exception e_login){
             System.out.println("Error login() --> "+e_login.getMessage());
+            driver.quit();
         }
     }
 
@@ -114,6 +115,7 @@ public class DemoBlazeStore {
 
         }catch(Exception e_AddCart){
             System.out.println("Error AddCart --> "+e_AddCart.getMessage());
+            driver.quit();
         }
 
     }
@@ -187,9 +189,11 @@ public class DemoBlazeStore {
             singleton.sleep_wait(3000);
             WebElement OkBtn = driver.findElement(By.xpath("//button[text()='OK']"));
             OkBtn.click();
+            driver.quit();
 
         }catch(Exception e_fill){
             System.out.println("Error e_fill --> "+e_fill.getMessage());
+            driver.quit();
         }
     }
 
@@ -208,6 +212,7 @@ public class DemoBlazeStore {
 
         }catch(Exception e_check){
             System.out.println("Error e_check --> "+e_check.getMessage());
+            driver.quit();
         }
     }
 
